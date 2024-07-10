@@ -1,0 +1,29 @@
+.valoresList .container {
+    position: relative;
+  }
+  
+  .valoresList .container .icon svg {
+    font-size: 32px;
+    line-height: 0;
+    margin-right: 20px;
+    color: var(--text-color);
+  }
+  
+  .valoresList .container .title {
+    font-weight: var(--font-bold);
+    margin-bottom: 5px;
+    font-size: var(--normal-font-size);
+  }
+  
+  .valoresList .container .title a {
+    color: var(--text-color);
+  }
+  
+  .valoresList .container .title a:hover {
+    color: var(--first-color);
+  }
+  
+  .valoresList .container .description {
+    line-height: 24px;
+    font-size: var(--normal-font-size);
+  }

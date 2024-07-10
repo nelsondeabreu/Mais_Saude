@@ -1,0 +1,33 @@
+@media (max-width:1199px){
+    .ColLg8{
+        width: 100%;
+    }
+    .ColLg4{
+        width: 100%;
+    }
+   
+}
+
+
+.ColMd4{
+    padding: 0;
+}
+
+.RowGap{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.Mb3{
+}
+
+@media (max-width:1247px){
+    .RowGap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+}

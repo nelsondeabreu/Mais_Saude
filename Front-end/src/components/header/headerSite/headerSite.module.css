@@ -1,0 +1,138 @@
+.header { 
+  transition: all 0.5s !important;
+  z-index: 997;
+  padding: 24px 0;
+}
+
+.header div{
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 12px 0;
+  }
+}
+
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color-light);
+  transition: 0.3s;
+}
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #fff;
+}
+.mobileNavShow,
+.mobileNavHide {
+  transition: .2s;
+}
+.mobileNavShow:hover {
+  color: var(--first-color) !important;
+}
+@media (min-width: 1110px) {
+  .mobileNavShow,
+  .mobileNavHide {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1110px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    background: rgba(27, 47, 69, 0.9);
+    padding: 2.2rem;
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 9997;
+    flex-direction: column;
+    align-items: end;
+    gap: 2.2rem;
+    transform: translateX(0);
+    display: none;
+  }
+  .flex {
+    
+    display: flex;
+  }
+  .navbar ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color-light);
+    transition: 0.3s;
+  }
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #fff;
+  }
+  .mobileNavShow {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+    position: fixed;
+    right: 0;
+    background: transparent;
+    border: 0;
+  }
+  .mobileNavHide {
+    color: #fff;
+    font-size: var(--biggest-font-size);
+    display: flex !important;
+    background: transparent;
+    border: none;
+  }
+  .mobileNavHide:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .btnList{
+   font-size: 2rem; 
+  }
+  .btnClose{
+   font-size: 2rem; 
+
+  }
+}

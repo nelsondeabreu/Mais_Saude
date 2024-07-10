@@ -1,0 +1,105 @@
+
+.recentposts .postbox {
+    transition: 0.3s;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .divContainer{
+    height: 580.7px;
+  }
+  
+  .recentposts .postbox .postimg {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .recentposts .postbox .postimg img {
+    transition: 0.5s;
+    height: 24rem;
+  }
+  
+  .recentposts .postbox .meta {
+    margin-top: 15px;
+  }
+
+  .recentposts .postbox .meta .postdate {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color);
+  }
+  
+  .recentposts .postbox .meta .postauthor {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color);
+  }
+  
+  .recentposts .postbox .posttitle {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-bold);
+    margin: 15px 0 0 0;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .recentposts .postbox p {
+    margin: 15px 0 0 0;
+    color: var(--text-color);
+  }
+  
+  .recentposts .postbox .readmore {
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-semibold);
+    line-height: 1;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0
+  }
+  
+  .recentposts .postbox .readmore svg {
+    line-height: 0;
+    margin-left: 4px;
+    font-size: var(--normal-font-size);
+  }
+  
+  .recentposts .postbox:hover .posttitle {
+    color: var(--first-color);
+  }
+  
+  .recentposts .postbox:hover .postimg img {
+    transform: scale(1.1);
+    transition: .2s;
+  }
+
+  .sectionheader {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .sectionheader h2 {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-semibold);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .sectionheader h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10rem;
+    height: 4px;
+    background: var(--first-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  

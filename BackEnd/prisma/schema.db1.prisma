@@ -1,0 +1,241 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/client1"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+//DataBase +MaisSaude
+
+model EntidadesSistema {
+  id            String          @id @default(uuid())
+  name          String
+  cnpj          String          @unique
+  tipo_entidade String
+  sobre         String?
+  email         String          @unique
+  foto          String?
+  enderecoID    String
+  endereco      Endereco        @relation(fields: [enderecoID], references: [id])
+  contactos     Contactos[]
+  especialista  Especialistas[]
+  seguidores    Seguidores[]
+}
+
+model Endereco {
+  id      String             @id @default(uuid())
+  adress  String
+  entitie EntidadesSistema[]
+}
+
+model Contactos {
+  id         String           @id @default(uuid())
+  contacto   String
+  entidade   EntidadesSistema @relation(fields: [entidadeID], references: [id])
+  entidadeID String
+  usuarioID  String
+  usuario    Usuarios         @relation(fields: [usuarioID], references: [id])
+}
+
+enum Sexo {
+  Masculino
+  Feminino
+}
+
+enum Consulta {
+  Marcada
+  Realizada
+  NRealizada
+  Cancelada
+}
+
+model Especialistas {
+  id               String                   @id @default(uuid())
+  nome             String
+  crm              String                   @unique
+  especialidade    String
+  tipo_De_Consulta String
+  valor            String?
+  bloqueado        String?                  
+  sexo             Sexo
+  entidadeID       String?
+  entidade         EntidadesSistema?        @relation(fields: [entidadeID], references: [id])
+  diasDisponiveis  DiasDisponiveis[]
+  horasDisponiveis HorasDisponiveis[]
+  consultas        Consultas[]
+}
+
+model Usuarios {
+  id                 String                   @id @default(uuid())
+  name               String
+  email              String                   @unique
+  crm                String?                  @unique
+  cnpj               String?                  
+  foto               String?
+  senha              String
+  sobre              String?
+  sexo               Sexo
+  socketID           String?
+  nascimento         DateTime
+  contactos          Contactos[]
+  pubblicacoes       Publicacoes[]
+  origem       Notificacoes[] @relation("sender")
+  destinatarioNotificacao       Notificacoes[] @relation("receiver")
+  consultas          Consultas[]
+  mensagensEnviadas  Mensagens[]              @relation("Enviadas")
+  mensagensRecebidas Mensagens[]              @relation("Recebidas")
+  remetente          MinhasConexoes[]         @relation("remetenteConnection")  
+  destinatario       MinhasConexoes[]         @relation("destinatarioConnection")
+  emissorDoPedido    PedidoDeConexao[]        @relation("emissorDoPedido")
+  receptorDoPedido   PedidoDeConexao[]        @relation("receptorDoPedido")
+  reacoes            Reacoes[]
+  comentarios        Comentarios[]
+  seguidor           Seguidores[]
+  partilha           Partilha[]
+}
+
+model Publicacoes {
+  id         String   @id @default(uuid())
+  conteudo   String
+  foto       String?
+  video      String?
+  data       DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+  usuarioPub Usuarios @relation(fields: [usuarioID], references: [id])
+  usuarioID  String
+  reacoes    Reacoes[]
+  comentarios Comentarios[]
+  notificacao Notificacoes[]
+  postPartilhado   Partilha[]    @relation("postPartilhado")
+  postCriado   Partilha[]    @relation("postCriado")
+}
+
+model Comentarios {
+  id        String       @id @default(uuid())
+  post      Publicacoes      @relation(fields: [postId], references: [id])
+  postId    String
+  autor    Usuarios     @relation(fields: [autorId], references: [id])
+  autorId  String
+  conteudo   String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Reacoes {
+  id        String    @id @default(uuid())
+  post      Publicacoes   @relation(fields: [postId], references: [id])
+  postId    String
+  user      Usuarios   @relation(fields: [userId], references: [id])
+  userId    String
+  type      String // Pode ser 'like', 'love', 'haha', 'wow', 'sad' ou 'angry'
+  createdAt DateTime @default(now())
+}
+
+model Notificacoes {
+  id                      String   @id @default(uuid())
+  data                    DateTime @default(now())  
+  usuarioNotificacao      Usuarios @relation("sender",fields: [usuarioID], references: [id])
+  destinatarioNotificacao Usuarios @relation("receiver",fields: [destinatarioID], references: [id])
+  usuarioID               String
+  destinatarioID          String
+  consultaID              String
+  postID                  String
+  post                    Publicacoes @relation(fields: [postID], references: [id])
+  consulta                Consultas @relation(fields: [consultaID], references: [id])
+  tipo                    String
+  visto                   String?                  
+}
+
+model Seguidores{
+  id String @id @default(uuid())
+  seguidorID String
+  seguidor Usuarios @relation(fields: [seguidorID], references: [id])
+  entidadeID String
+  entidade EntidadesSistema @relation(fields: [entidadeID], references: [id])
+}
+
+model Mensagens {
+  id         String   @id @default(uuid())
+  conteudo   String?
+  foto       String?
+  video      String?
+  arquivo    String?
+  data       DateTime @default(now())
+  emissor    Usuarios @relation("Enviadas", fields: [emissorID], references: [id])
+  receptor   Usuarios @relation("Recebidas", fields: [receptorID], references: [id])
+  emissorID  String
+  receptorID String
+  visto      Boolean @default(false)
+}
+
+model DiasDisponiveis {
+  id               String             @id @default(uuid())
+  date             DateTime
+  especialistaID   String
+  horasDisponiveis HorasDisponiveis[]
+  especialista     Especialistas      @relation(fields: [especialistaID], references: [id])
+}
+
+model HorasDisponiveis {
+  id                String          @id @default(uuid())
+  hora              String
+  diasDisponiveisID String
+  diasDisponiveis   DiasDisponiveis @relation(fields: [diasDisponiveisID], references: [id])
+  especialistaID    String
+  especialista      Especialistas   @relation(fields: [especialistaID], references: [id])
+}
+
+model Consultas {
+  id               String        @id @default(uuid())
+  tipo_Da_Consulta String
+  data             DateTime
+  hora             String
+  especialistaID   String
+  status           Consulta
+  pacienteID       String
+  especialista     Especialistas @relation(fields: [especialistaID], references: [id])
+  usuario          Usuarios      @relation(fields: [pacienteID], references: [id])
+  notificacoes     Notificacoes[]
+}
+
+model VideoCall {
+  id           String         @id @default(uuid())
+  emissor      String
+  destinatario String
+  offer        Json?
+  answer       Json?
+}
+
+model MinhasConexoes {
+  id             String        @id @default(uuid())
+  userID String
+  user   Usuarios @relation("remetenteConnection", fields: [userID], references: [id])
+  friendID String
+  friend   Usuarios @relation("destinatarioConnection", fields: [friendID], references: [id])
+
+}
+
+model PedidoDeConexao{
+  id String @id @default(uuid())
+  userID String
+  destinatarioID String
+  user Usuarios @relation("emissorDoPedido",fields: [userID], references: [id])
+  destinatario Usuarios @relation("receptorDoPedido",fields: [destinatarioID], references: [id])
+} 
+
+model Partilha {
+  id        String     @id @default(uuid())
+  userID   String
+  createPostShareID String
+  postShareID    String
+  user      Usuarios     @relation(fields: [userID], references: [id])
+  post      Publicacoes     @relation("postPartilhado",fields: [postShareID], references: [id])
+  postShare      Publicacoes     @relation("postCriado",fields: [createPostShareID], references: [id])
+  createdAt DateTime @default(now())
+}

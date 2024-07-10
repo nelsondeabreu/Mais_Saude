@@ -1,0 +1,17 @@
+
+.profile_edit label {
+    font-weight: 600;
+    color: rgba(1, 41, 112, 0.6);
+  }
+  .btnAdd{
+    background-color: var(--first-color);
+    color: #fff;
+    border: none;
+    padding: 8px;
+    transition: .5s;
+    border-radius: 6px ;
+  }
+
+  .btnAdd:hover{
+    background-color: var(--text-color);
+  }

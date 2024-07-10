@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  db-maisSaude:
+    image: mysql:alpine
+    ports:
+      - 3306-3306
+    conatiner_name: "db-maisSaude"
+    restart: always
+    volumes:
+      - ./db-maisSaude:/var/lib/mysql/data
+      enviroment:
+        MYSQL_USER: mysqluser
+        MYSQL_PASSWORD: mysqlpassword
+
+valumes:
+  db-maisSaude:

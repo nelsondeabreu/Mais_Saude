@@ -1,0 +1,72 @@
+.cards{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titlebtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+ .btnCreate{
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 10px;
+    border-radius:10px ;
+    border: none;
+}
+
+ .dropdown{
+    position: absolute;
+    box-shadow:var(--box-shadow);
+    background-color: white;
+    right: 0;
+    top: 100%;
+    width: 300px;
+    height: 210px;
+    z-index: 1;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+ .dropdown h3{
+    color: var(--text-color);
+}
+
+ .dropdown form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 130px;
+    position: relative;
+    gap: 5%;
+    margin-top: 7%;
+}
+
+ .dropdown form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(97, 97, 97);
+    outline: none;
+}
+
+ .dropdown form input:focus{
+    border: 1px solid rgb(97, 97, 97);
+}
+
+ .dropdown::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    transform: rotate(45deg);
+}

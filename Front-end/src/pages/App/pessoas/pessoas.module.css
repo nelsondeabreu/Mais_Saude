@@ -1,0 +1,16 @@
+
+
+
+.titleLinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titleLinks .links{
+    background-color: var(--first-color);
+    padding: 10px;
+    
+}
+.titleLinks .links a{
+    color: #fff;
+}

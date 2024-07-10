@@ -1,0 +1,71 @@
+
+.profile_edit label {
+    font-weight: 600;
+    color: rgba(1, 41, 112, 0.6);
+  }
+   .profile_edit img {
+    max-width: 120px;
+  }
+  .card {
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  }
+.margin_right{
+  margin-right: .5rem;
+}
+
+.imageHospital{
+  width: 100px;
+  height: 100px;
+}
+.card_title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+}
+.card_title span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+.icons{
+  display: flex;
+  gap: .2rem;
+}
+.btn{
+  padding: 2px;
+  background-color: rgb(73, 182, 73);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
+.btn svg{
+  width: 1.5rem;
+  stroke-width: 1.5;
+}
+.uploadIcon{
+  padding: 2px;
+  color: #fff;
+  background-color:#0d6efd ;
+  border-radius: 5px;
+}
+
+.uploadIcon svg{
+  width: 1.5rem;
+  stroke-width: 1.5;
+}
+
+.trashIcon{
+  padding: 2px;
+  color: #fff;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.trashIcon svg{
+  width: 1.5rem;
+  stroke-width: 1.5;
+}

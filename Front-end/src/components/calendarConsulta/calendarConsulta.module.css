@@ -1,0 +1,161 @@
+.main{
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.main .container{
+  width: 60%;
+}
+
+.sectionMain{
+  margin: 0;
+  padding: 0;
+}
+
+.sectionMain .container {
+  border: .5px solid rgba(1, 41, 112, 0.1);
+  box-shadow: var(--box-shadow);
+
+}
+
+ .container{
+  border: .5px solid rgba(1, 41, 112, 0.1);
+  background: #ffffff;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  gap: .8rem;
+  padding: 34px 20px 30px;
+  height: 50vh;
+  border-radius: 10px;
+}
+.container .dayOfWeek{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.container .dayOfWeek li{
+  display: flex;
+  flex-direction: column; 
+  cursor: pointer;
+}
+.container .consultHours .hours {
+  border:1px solid #96999b;
+  width: 55px;
+  height: 26px;
+  border-radius: 5px;
+  margin-top: .5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: #fff;
+}
+
+.container .consultHours .hours:hover{
+  background-color: var(--first-color);
+  border: none;
+  color: #fff;
+}
+
+.container .consultHours .hours :active{
+  background-color: var(--first-color);
+  border: none;
+}
+
+.allHours{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: 100%;
+  height: 100%;
+  padding-left: .4rem;
+}
+
+.consultHours{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 1.2rem;
+  position: relative;
+
+}
+
+.addHour{
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.addHour button{
+  border: none;
+  color: #fff;
+  background-color: var(--first-color);
+  border-radius: 5px;
+}
+
+.dayOfWeek button{
+  border: none;
+  background: transparent;
+}
+
+.btnSave{
+  padding: 8px;
+  background-color: var(--first-color);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  display:flex ;
+  margin: auto;
+  margin-top: 1rem;
+  
+}
+
+.divButton .btnSave{
+  padding: 8px;
+  background-color: var(--first-color);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+
+.popover {
+  position: absolute;
+  background-color: white;
+  padding: 5px;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  border: 1px solid #cfd0d1;
+  z-index: 999;
+}
+
+.popover button{
+  border: none;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  
+}
+
+.popover button svg {
+  width: 18px;
+  stroke-width: 2px;
+  color: red;
+}
+
+.popover::before{
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  top:-15%;
+  left: 8px;
+  transform: rotate(43deg);
+}
+

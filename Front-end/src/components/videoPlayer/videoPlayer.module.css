@@ -1,0 +1,142 @@
+.videoContainer {
+  position: relative;
+  height: 100%;
+}
+
+.vitionContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.vition {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.otherControls {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.infoUser{
+  color: #fff;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.legend{
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding: 10px;
+  flex-wrap: wrap;
+
+}
+
+.infoUser .btnFollow{
+  cursor: pointer;
+}
+
+.infoUser img{
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+.otherControls2 {
+  padding: 10px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controlButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controlButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.controlButton svg {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+/* Adicione estilos específicos para o botão de reprodução/pausa se necessário */
+
+.video {
+  width: 100%;
+  height: 100%;
+
+}
+
+.videoControls {
+  position: absolute;
+  top: 13rem; /* Distância do fundo */
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlButton {
+  background: none;
+  border: none;
+  color: #fff; /* Cor dos botões */
+  cursor: pointer;
+  margin: 0 10px;
+  transition: opacity 0.3s ease;
+}
+
+.controlButton svg{
+  width: 1.1rem;
+}
+
+.controlButton:hover {
+  opacity: 0.7;
+}
+
+.btnPlay{
+  background: #000;
+  border-radius:100% ;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.otherControls{
+  position: absolute;
+  bottom: 10px; /* Distância do fundo */
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}

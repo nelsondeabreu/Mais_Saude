@@ -1,0 +1,103 @@
+.contact .infoItem + .infoItem {
+    margin-top: 40px;
+  }
+
+  
+  .contact .infoItem svg { 
+    font-size: 48px;
+    background: var(--first-color );
+    color: #fff;
+    height: 44px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+  }
+
+  .contact .infoItem h4 {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1c88ba;
+    text-align: start;
+  }
+  
+  .contact .infoItem p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  
+  .contact .emailForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width:1290px){
+  .contact .emailForm .formGroup input{
+    width: 261px;
+  }
+  .contact .emailForm .formGroup input[placeholder="Assunto"], .contact .emailForm .formGroup textarea{
+    width: 546px;
+  }
+  }
+
+  .contact .emailForm .formGroup {
+    padding-bottom: 8px;
+  }
+
+  .contact .emailForm .formGroup input,
+  .contact .emailForm .formGroup textarea{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    width: 100%;
+    margin: 0;
+    border: 1px solid #d7d7db;
+    outline: none;  
+  }
+
+  .contact .emailForm .formGroup input{
+    padding: 14px 20px;
+  }
+
+  .contact .emailForm .formGroup input:focus {
+    border-color:var(--first-color); 
+  }
+
+  .contact .emailForm .formGroup input[placeholder="Assunto"]{
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .contact .emailForm .formGroup input[placeholder="Assunto"]:focus, .contact .emailForm .formGroup textarea:focus {
+    border-color:var(--first-color); 
+  }
+
+  .contact .emailForm .formGroup textarea{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 12px 15px;
+    width: 100%;
+    border: 1px solid #d7d7db;
+    outline: none;
+  }
+  
+  .contact .emailForm button{
+    background: #1f98d1;
+    border: 0;
+    padding: 12px 80px;
+    color: #fff;
+    transition: 0.4s;
+  }
+  
+  .contact .emailForm button:hover {
+    background: var(--text-color);
+  } 

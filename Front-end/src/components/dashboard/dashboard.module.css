@@ -1,0 +1,138 @@
+@media (min-width:769px) {
+    .sidebar{
+        position: fixed;
+        width: 80px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: var(--box-shadow);
+        background: #fff;
+        top: 0;
+    }
+
+    .sidebarNav{
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+    }
+
+    .sidebarNav svg{
+        color: #65676b;
+    }
+   
+    .different svg{
+        width: 24px;
+        height: 24px;
+    }
+    .sidebarNav .navLink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+        font-weight: var(--font-semibold);
+        color: var(--text-color);
+        transition: 0.3;
+        border-radius: 2px;
+    }
+    
+    .sidebar .logoDash{
+        border: 2px solid var(--first-color);
+        padding: .1rem;
+        border-radius: .5rem;
+        transform: rotate(16deg);
+        font-size: var(--biggest-font-size);
+        position: relative;
+        top: 1rem;
+    }
+
+    .sidebar .logoDash:hover{
+        transition: .5s;
+        transform: rotate(-16deg) scale(1.1);
+
+    }
+
+    .sidebarNav .navLink svg{
+        font-size: var(--h2-font-size);
+
+    }
+    .sidebarNav .navLink small{
+        font-size: var(--smaller-font-size);
+    }
+    .sidebarNav .navLink:focus svg{
+        fill: var(--first-color);
+        color: var(--first-color);
+    }
+   
+}
+
+@media (max-width:769px){
+    .sidebar{
+
+        position: fixed;
+        bottom: 0;
+        height: 4rem;
+        width: 100%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+    }
+    .sidebar .logoLink{
+        display: none;
+    }
+
+    .sidebarNav {
+        height: 100%;
+        width: 85%;
+        justify-content:space-around;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        border: 1px;
+    }
+    
+    .sidebarNav .navItem{
+        margin: 10px 0px;
+    }
+    
+    .sidebarNav .navLink {
+        font-size: 15px;
+        font-weight: var(--font-semibold);
+        color: var(--text-color);
+        transition: 0.3;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .sidebarNav .navLink svg{
+        font-size: var(--h2-font-size);
+        margin: 0 5px;
+    }
+   
+    .sidebarNav .navLink:focus {
+        background-color: #eee;
+    }
+    .hideIcon{
+        display: none;
+    }    
+}
+
+.hospital svg{
+    width: 24px;
+    height: 24px;
+    stroke-width: 1 ;
+}
+
+.home svg{
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,77 @@
+.profileBody{
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(1, 57, 155, 0.1);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    background: #fff;
+
+}
+
+.profileBody .newPost{
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.Container .profileBody{
+    width: 590px;
+    margin-top: 3%;
+}
+
+.profileBody .newPost textarea{
+    width: 100%;
+    outline: none;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #5a5a5a;
+}
+
+.Container .profileBody{
+    width: 590px;
+    margin-top: 3%;
+}
+
+.profileBody .newPost .midiaBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+.Container .profileBody{
+    width: 590px;
+    margin-top: 3%;
+}
+
+.profileBody .newPost .midiaBtn .midia{
+    display: flex;
+    gap: 10%;
+}
+.Container .profileBody{
+    width: 590px;
+    margin-top: 3%;
+}
+
+.profileBody .newPost .midiaBtn .midia svg{
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+.profileBody .newPost .midiaBtn .midia label{
+    cursor: pointer;
+}
+
+.Container .profileBody{
+    width: 590px;
+    margin-top: 3%;
+}
+
+.profileBody .newPost .midiaBtn .btnPost {
+    padding: 10px 25px;
+    background-color: var(--first-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}

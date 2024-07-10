@@ -1,0 +1,30 @@
+.serviceslist .serviceitem {
+    position: relative;
+  }
+  
+  .serviceslist .serviceitem .icon svg {
+    font-size: 32px;
+    line-height: 0;
+    margin-right: 20px;
+    color: var(--text-color);
+  }
+  
+  .serviceslist .serviceitem .title {
+    font-weight: var(--font-bold);
+    margin-bottom: 5px;
+    font-size: var(--normal-font-size);
+  }
+  
+  .serviceslist .serviceitem .title a {
+    color: var(--text-color);
+  }
+  
+  .serviceslist .serviceitem .title a:hover {
+    color: var(--first-color);
+  }
+  
+  .serviceslist .serviceitem .description {
+    line-height: 24px;
+    font-size: var(--normal-font-size);
+  }
+

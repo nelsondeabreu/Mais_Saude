@@ -1,0 +1,299 @@
+
+.chat{
+    width: calc(100% - 30%);
+    height: 40rem;
+}
+.chat1{
+    width: 30%;
+}
+
+
+.cardContacts{
+    box-shadow: var(--box-shadow);
+    overflow: auto;
+    border-radius: 10px;
+    background-color: #fff !important;
+    height: 100%;
+}
+
+.cardMessages{
+    box-shadow: var(--box-shadow);
+    overflow: auto;
+    border-radius: 10px;
+    background-color: #fff !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.chat::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .chat::-webkit-scrollbar-track {
+    background: transparent;   
+  }
+  
+  .chat::-webkit-scrollbar-thumb {
+    background-color: silver;    
+    border-radius: 10px;       
+    border: 2px solid whitesmoke;
+    border: 1px solid red;
+  }
+
+.contacts_body{
+    padding:  1rem;
+}
+
+.msg_card_body{
+    overflow-y: auto;
+    padding: 1rem;
+}
+.card_header{
+    border-radius: 15px 15px 0 0 !important;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+.card_header_chat{
+    border-radius: 15px 15px 0 0 !important;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: var(--box-shadow);
+}
+.card_footer{
+    border-radius: 0 0 15px 15px !important;
+    border-top: 0 !important;
+}
+.container{
+    align-content: center;
+}
+.search{
+    border-radius: 15px 0 0 15px !important;
+    background-color: rgba(0,0,0,0.3) !important;
+    border:0 !important;
+    color:white !important;
+}
+.search:focus{
+     box-shadow:none !important;
+   outline:0px !important;
+}
+.type_msg{
+    background-color: #F0F2F5 !important;
+    border:none;
+    height: 50px !important;
+    overflow-y: auto;
+}
+.type_msg:focus{
+     box-shadow:none !important;
+   outline:0px !important;
+}
+.attach_btn{
+    border-radius: none;
+background-color: #F0F2F5 !important;
+    border:none;
+    color: white !important;
+    cursor: pointer;
+}
+.attach_btn svg{
+    color: var(--first-color);
+}
+.send_btn{
+    border-radius: none;
+    border:none;
+    background-color: #F0F2F5 !important;
+    color:var(--first-color);
+    cursor: pointer;
+}
+.search_btn{
+    border-radius: 0 15px 15px 0 !important;
+    background-color: rgba(0,0,0,0.3) !important;
+    border:0 !important;
+    color: white !important;
+    cursor: pointer;
+}
+.contacts{
+    list-style: none;
+    padding: 0;
+}
+
+.video_cam{
+margin-left: 50px;
+margin-top: 5px;
+display: flex;
+gap: 1rem;
+}
+.video_cam span{
+cursor: pointer;
+margin-right: 20px;
+}
+.msg_cotainer{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 10px;
+border-radius: 25px;
+background-color: #82ccdd;
+padding: 10px;
+position: relative;
+}
+.msg_cotainer_send{
+margin-top: auto;
+margin-bottom: auto;
+margin-right: 10px;
+border-radius: 25px;
+background-color: #78e08f;
+padding: 10px;
+position: relative;
+}
+.msg_time{
+position: absolute;
+left: 0;
+bottom: -15px;
+color: rgba(255,255,255,0.5);
+font-size: 10px;
+}
+.msg_time_send{
+position: absolute;
+right:0;
+bottom: -15px;
+color: rgba(255,255,255,0.5);
+font-size: 10px;
+}
+.msg_head{
+position: relative;
+}
+#action_menu_btn{
+position: absolute;
+right: 10px;
+top: 10px;
+color: white;
+cursor: pointer;
+font-size: 20px;
+}
+.action_menu{
+z-index: 1;
+position: absolute;
+padding: 15px 0;
+background-color: rgba(0,0,0,0.5);
+color: white;
+border-radius: 15px;
+top: 30px;
+right: 15px;
+display: none;
+}
+.action_menu ul{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.action_menu ul li{
+width: 100%;
+padding: 10px 15px;
+margin-bottom: 5px;
+}
+.action_menu ul li i{
+padding-right: 10px;
+
+}
+.action_menu ul li:hover{
+cursor: pointer;
+background-color: rgba(0,0,0,0.2);
+}
+@media(max-width: 576px){
+.contacts_card{
+margin-bottom: 15px !important;
+}
+}
+
+.user_img{
+    width: 40px;
+    height: 40px;
+}
+
+.img_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.apresentation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentationBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:5rem;
+}
+
+.apresentationBody p{
+    text-align: center;
+    color: #65676B;
+}
+
+.headerMyEspecialists{
+    border-radius: 15px 15px 0 0 !important;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+.menu{
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+}
+
+.menu ul li{
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu ul li:hover{
+    background-color: #f1e9e9;
+}
+
+.formReceita{
+    position: fixed;
+    top: 5rem;
+    z-index: 1010;
+    left: 25rem;
+}
+
+.images{
+    width: 100%;
+    background-color: #F0F2F5;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    gap: 3rem;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+embed{
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+.msg_card_body{
+    height: 100%;
+}
+
+.btnRemove{
+    border-radius: 100%;
+    background-color: #E4E6EB;
+    height: 2.2rem;
+    position: fixed;
+}

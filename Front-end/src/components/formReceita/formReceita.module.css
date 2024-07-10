@@ -1,0 +1,62 @@
+.container{
+  background:#fff;
+  box-shadow:var(--box-shadow);
+  width:45rem;
+  padding:20px;
+}
+.container2{
+  background:#fff;
+  box-shadow:var(--box-shadow);
+  width:45rem;
+  padding:20px;
+  height: 20rem;
+}
+.btnRemove{
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.inputHour{
+  margin-top: 2.5rem;
+}
+.btnSub{
+  margin-top: 3rem;
+
+}
+.btnAdd{
+  padding: 10px;
+  background-color: green;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.btnSubmit{
+  padding: 10px;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+.divDelete{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.form{
+  margin-top: 2rem;
+  
+}
+
+.pdf{
+  position: fixed;
+  top: 1rem;
+  right:15rem;
+}
+
+.divSubmit{
+  width: 100%;
+}

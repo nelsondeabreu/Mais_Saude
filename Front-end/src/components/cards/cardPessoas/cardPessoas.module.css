@@ -1,0 +1,313 @@
+.cardContainer{
+    width: 188px;
+    padding: 0;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.cardContainer div{
+    padding: 10px;
+}
+
+.cardContainer div p{
+    text-align: center;
+    color: #65676b;
+}
+
+.cardContainer div h5{
+text-align: center;
+}
+
+.cardContainer div button{
+    border: none;
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cardContainer img{
+    width: 100%;
+    height: 210px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+@media (max-width:596px){
+    .cardContainer{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       padding: 10px;
+    }
+
+    .cardContainer img{
+        border-radius: 50% !important;
+        width: 70px;
+        height: 70px;
+    }
+    .cardContainer div p{
+        text-align: start;
+        margin-top: 5px;
+    }
+    .cardContainer div h5{
+        text-align: start;
+    }
+}
+
+.cardConnections{
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+ }
+ .cardFollowers{
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 1rem;
+ }
+ .cardFollowers img{
+    border-radius: 50% !important;
+     width: 50px;
+     height: 50px;
+ }
+
+ .cardFollowers div p{
+    text-align: start;
+    margin-top: 5px;
+}
+.cardFollowers div h5{
+    text-align: start;
+    font-weight: 400;
+}
+
+.cardFollowers div button{
+   border: none;
+   background-color: var(--first-color);
+   display: block;
+   width: 100%;
+   color: #fff;
+   padding: 10px;
+   border-radius: 6px;
+}
+
+.cardFollowers div{
+   padding: 10px;
+}
+
+ .cardConnections img{
+     border-radius: 50% !important;
+     width: 70px;
+     height: 70px;
+ }
+ .cardConnections div p{
+     text-align: start;
+     margin-top: 5px;
+ }
+ .cardConnections div h5{
+     text-align: start;
+ }
+
+ .cardConnections div button{
+    border: none;
+    background-color: var(--first-color);
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cardConnections div{
+    padding: 10px;
+}
+
+.cardContainer .divButtons{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+  
+.cardContainer .divButtons .btnConfirm{
+    border: none;
+    background-color: var(--first-color);
+    color: #Fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cardContainer .divButtons .btnReject{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #b0b0b3;
+}
+
+.cardContainer .divContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .div{
+    border: 1px solid red;
+    padding: 0;
+ }
+
+ .info{
+    width: 100%;
+ }
+.cardSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: .3rem;
+ }
+
+ .cardSearch img{
+     border-radius: 50% !important;
+     width: 50px;
+     height: 50px;
+ }
+ 
+ .cardSearch div h5{
+    font-size: var(--h3-font-size);
+    font-weight: 500;
+     text-align: start;
+ }
+ .cardSearch .divGeral{
+    padding: .5rem;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+ }
+ .cardSearch .divContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .cardSearch .divContent div {
+    display: flex;
+    flex-direction: column;
+}
+
+ .cardSearch .divContent div small{
+    color: #65676b;   
+ }
+
+ .cardSearch .divBtns{
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.cardSearch .divBtns .btnConfirm{
+    border: none;
+    background-color: var(--first-color);
+    color: #Fff;
+    border-radius: 5px;
+    padding: 6px;
+
+}
+
+.cardHospital{
+    border: 1px solid #b0b0b381;
+    height: 24rem;
+    width: 13rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.cardHospital div{
+    padding: 10px;
+}
+
+
+.cardHospital div h5{
+text-align: center;
+}
+
+.cardHospital div button{
+    border: none;
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cardHospital img{
+    width: 100%;
+    height: 190px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.divInfo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.divInfo span{
+    color: #b0b0b3;
+}
+.cardHospital .divBtns .btnFollow{
+    border: none;
+    background-color: var(--first-color);
+    color: #Fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cardEspecialista{
+    border: 1px solid #b0b0b381;
+    width: 13rem;
+    padding: 0;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    flex-shrink: 0;
+}
+
+.cardEspecialista div{
+    padding: 10px;
+}
+
+
+.cardEspecialista div h5{
+text-align: center;
+}
+
+.cardEspecialista div button{
+    border: none;
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cardEspecialista img{
+    width: 100%;
+    height: 190px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}

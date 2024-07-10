@@ -1,0 +1,54 @@
+.imageHospital{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:768px){
+    .imageHospital{
+        padding: 0 10px 0 10px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container{
+        border-top: 1px solid var(--first-color-alt);
+
+    }
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.container .infoHospital{
+    padding: 30px;
+    height: 100%;
+}
+
+.container .infoHospital h3{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semibold);
+    color: #65676b;
+}
+.container .infoHospital a h2{
+    font-size: var(--h1-font-size);
+    font-weight: normal;
+    color: var(--text-color);
+}
+.container .infoHospital h4{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semibold);
+
+}
+
+.container .contactosHospital{
+    padding: 30px;
+    height: 100%;
+
+}
+.container .contactoHospital svg{
+    font-size: var(--h2-font-size);
+}
+

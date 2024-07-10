@@ -1,0 +1,112 @@
+
+ .infoUser{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+}
+.imageUserBig{
+    width: 55px;
+    height: 55px;
+    border-radius: 50% !important;
+}
+.imageUser{
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    border: none;
+}
+
+.imageUserBig{
+    border: none;
+}
+
+.infoUser .divIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.infoUser .divIcon svg{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+ .infoUser div{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ 
+ .infoUser div svg{
+     color: #eee;
+     font-size: var(--h2-font-size);
+ }
+ 
+ @media(min-width:728px){
+    .infoUser div .navImageNameBig {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 65%;
+        border: 1px solid rgba(169, 167, 167, 0.493);
+        border-radius: 25px;
+        background-color: #65676b45;
+        backdrop-filter: blur(5px);
+        height: 100%;
+        padding: 10px;
+        gap: .8rem;
+    }
+ }
+ 
+
+ .infoUser div .navImageNameBig .divImage{
+    display: flex;
+    gap: .5rem;
+    justify-content: start;
+
+}
+
+.infoUser div .navImageNameBig p{
+    color: #fff;
+    
+}
+
+/*Small*/
+
+.infoUser div .navImageNameSmall {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    width: 50%;
+    border: 1px solid rgba(169, 167, 167, 0.493);
+    border-radius: 50px;
+    background-color: #65676b45;
+    backdrop-filter: blur(5px);
+    
+}
+ 
+.infoUser div .navImageNameBig span, .infoUser div .navImageNameSmall span{
+     color: #fff;
+ }
+ 
+ .infoUser div .navImageNameSmall span{
+    font-size: var(--small-font-size);
+ }
+
+ @media(max-width:728px){
+    .infoUser div .navImageNameBig p{
+    display: none;        
+    }
+    .infoUser div .navImageNameBig {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 65%;
+        border-radius: 25px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(169, 167, 167, 0.493);
+        background-color: #65676b45;
+
+    }
+ }

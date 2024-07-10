@@ -1,0 +1,22 @@
+.enterSite {
+    background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)), url("../../assets/img/feature.jpg") center center;
+    background-size: cover;
+    padding: 100px 0;
+  }
+  
+   .enterSite {
+      background-attachment: fixed;
+    }
+  .enterSite h3 {
+    color: #fff;
+    font-size: var(--biggest-font-size);
+    margin-bottom: 25px;
+    font-weight: var(--font-bold);
+  }
+  
+  .enterSite p {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: var(--h3-font-size);
+  }
+  

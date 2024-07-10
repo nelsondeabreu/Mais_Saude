@@ -1,0 +1,80 @@
+.container .infoEspecialista{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 5px;
+    margin-top: .3rem;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.container .infoEspecialista .divInfo{
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+.info{
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.container .infoEspecialista div span{
+    color: #65676b;
+}
+
+.container .infoEspecialista img{
+    width: 61px;
+    height: 61px;
+    border-radius: 50% !important;
+}
+
+.btnDelete{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btnDelete .btnDespedir{
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background-color: red;
+    border-radius: 10px;
+    right: 0px;
+}
+
+.btnDelete .btnBlock:hover{
+    transition: .5s;
+    background-color: #646464;
+}
+
+.btnDelete .btnDespedir:hover{
+    transition: .5s;
+    background-color: rgb(161, 20, 20);
+}
+
+.btnDelete .btnBlock{
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background-color: #b8b4b4;
+    border-radius: 10px;
+    right: 0px;
+}
+
+.btnDelete .btnBlock svg{
+    width: 20px;
+    height: 20px;
+}
+
+.infoBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}

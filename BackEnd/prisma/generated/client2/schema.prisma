@@ -1,0 +1,50 @@
+
+generator client {
+  provider = "prisma-client-js"
+  output = "./generated/client2"
+}
+
+datasource db1 {
+  provider = "mysql"
+  url      = env("SECOND_DATABASE_URL")
+}
+
+enum Sexo{
+  Masculino
+  Feminino
+}
+
+
+model Entidades {
+  id   String @id @default(uuid())
+  name String @unique
+  cnpj String@unique
+  type String
+  endereco  endereco @relation(fields: [id_endereco], references: [id])
+  id_endereco String
+  contacto contacto[] 
+  especialistas Especialistas[]
+
+}
+
+model Especialistas {
+  id String @id @default(uuid())
+  nome String 
+  crm String @unique
+  sexo Sexo
+  entidadeID String
+  entitie Entidades @relation(fields: [entidadeID], references: [id])
+}
+
+model contacto {
+  id   String @id @default(uuid())
+  numero String @unique
+  id_entitie String
+  entitie  Entidades @relation(fields: [id_entitie], references: [id])
+}
+
+model endereco {
+  id   String @id @default(uuid())
+  adress String
+  entitie Entidades[] 
+}

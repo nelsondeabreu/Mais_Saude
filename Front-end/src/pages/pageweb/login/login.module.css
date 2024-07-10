@@ -1,0 +1,137 @@
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    top: 0 !important;
+    left: 0;
+    z-index: 1954;
+}
+.main img{
+    width: 40%;
+    height: 100%;
+}
+
+.main .sectionContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    background-color: #f6f7f8;
+}
+
+.main .sectionContainer .btnBack{
+    font-size: var(--biggest-font-size);
+    position: absolute;
+    top: 5%;
+    right:55%;
+}
+.main .sectionContainer > a{
+    color: var(--text-color);
+}
+
+
+.main .sectionContainer .navInfo{
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .sectionContainer .navInfo hr{
+    width: 416px;
+    height: 1px;
+    margin: 30px 0;
+    text-align: center;
+    overflow: visible;
+    border: none;
+    background-color: #9e9ea8;
+    color: #000000;
+}
+.main .sectionContainer .navInfo form p {
+    text-align: center;
+}
+
+.main .sectionContainer .navInfo hr::after{
+    content: "Ou faça login com seu email";
+    position: relative;
+    top: -7px;
+    padding: 0 16px;
+    background-color: #fff;
+}
+.main .sectionContainer .navInfo .navInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .sectionContainer .navInfo .navInputs .forget{
+    color: var(--first-color);
+}
+.main .sectionContainer .navInfo .btn_Google{
+    width: 100%;
+    padding: 0px 24px;
+    border: 1px solid #d7d7db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 56px;
+    border-radius: 50px;
+    color: #000;
+    transition: .5s;
+}
+.main .sectionContainer .navInfo .btn_Google:hover{
+    background-color: #3e3e3e;
+    color: #fff;
+}
+
+
+.main .sectionContainer .navInfo p{
+    margin-top: 1rem;
+}
+
+
+/*Mobile*/
+
+@media (max-width:959px){
+    .main .sectionContainer{
+        width: 100%;
+        position: fixed;
+        right: 0;
+    }  
+    .main img{
+        display: none;
+    }
+    .main .sectionContainer .btnBack{
+        font-size: var(--biggest-font-size);
+        position:fixed;
+        left:30px;
+        top: 5%;
+    }
+}
+
+@media (max-width:428px){
+    .main .sectionContainer{
+        width: 100%;
+    }  
+    .main img{
+        display: none;
+    }
+    .main .sectionContainer .navInfo{
+        width:300px;
+    }
+    .main .sectionContainer .navInfo .navInputs div{
+        width:300px;
+    }
+    .main .sectionContainer .navInfo .navInputs input{
+        padding:15px 15px;
+    }
+    .main .sectionContainer .btnBack{
+        font-size: var(--biggest-font-size);
+        position:fixed;
+        left:15px;
+        top: 5%;
+    }
+}

@@ -1,0 +1,93 @@
+.SectionTeam .teamMember {
+    overflow: hidden;
+  }
+  
+  .SectionTeam .teamMember .memberImg {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .SectionTeam .teamMember .social {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    opacity: 0;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .SectionTeam .teamMember .social a {
+    transition: 0.3s;
+    color: var(--first-color);
+    margin: 0 10px;
+  }
+  
+  .SectionTeam .teamMember .social a svg {
+    line-height: 0;
+    font-size: var(--h2-font-size);
+  }
+  
+  .SectionTeam .teamMember .social a:hover {
+    color: var(--text-color);
+  }
+  
+  .SectionTeam .teamMember .social svg {
+    font-size: var(--normal-font-size);
+    margin: 0 2px;
+  }
+  
+  .SectionTeam .teamMember .memberInfo {
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+  }
+  
+  .SectionTeam .teamMember .memberInfo h4 {
+    font-weight: var(--font-bold);
+    margin-bottom: 5px;
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+  }
+  
+  .SectionTeam .teamMember .memberInfo span {
+    display: block;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-minium);
+    color: var(--first-color-alt);
+  }
+  
+  .SectionTeam .teamMember:hover .social {
+    opacity: 1;
+  }
+
+  .sectionHeader {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .sectionHeader h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semibold);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .sectionHeader h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--first-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  

@@ -1,0 +1,47 @@
+.servicesCards {
+    background: var(--second-body-color);
+  }
+  
+  .servicesCards .cardItem {
+    border: 1px solid rgba(27, 47, 69, 0.1);
+    background: #fff;
+    position: relative;
+    border-radius: 0;
+  }
+  
+  .servicesCards .cardItem .cardImage {
+    min-height: 300px;
+  }
+
+  @media (max-width:991px){
+  .servicesCards .cardItem .cardImage{
+    background-size: cover;
+    background-position: center;
+    min-height: 750px;
+  }
+}
+
+@media (max-width:500px){
+  .servicesCards .cardItem .cardImage{
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+  }
+}
+  
+  .servicesCards .cardItem .cardContent {
+    padding: 30px;
+  }
+  
+  .servicesCards .cardItem h4 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+  }
+  
+  .servicesCards .cardItem p {
+    color: var(--color-secondary);
+    margin: 0;
+  }
+  

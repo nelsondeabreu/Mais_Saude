@@ -1,0 +1,18 @@
+
+.cardContainer {
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+  }
+
+
+
+.cardContainer .cards{
+  width: 100%;
+}
+
+

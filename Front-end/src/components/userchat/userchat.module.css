@@ -1,0 +1,70 @@
+.chat:hover{
+    cursor: pointer;
+    background-color: #f5f2f2ba;
+    border-radius:10px ;
+}
+.chat{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cardBody{
+    display: flex;
+    padding: 5px;
+    gap: .5rem;
+}
+
+.container2{
+    display: flex;
+    padding: 0px;
+    margin-top: .2rem;
+    gap: .5rem; 
+}
+
+.avatar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.message{
+    color: #65676B;
+    font-size: .920rem;
+    width: 280px;
+    max-width: 37ch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.about{
+    color: #65676B;
+    font-size: .920rem;
+}
+
+.messageInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.messageTime{
+    font-size: var(--small-font-size);
+}
+
+.divText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.data{
+    width: 100%;
+    word-wrap: break-word;
+
+}
+
+.cardContainerConnection:hover{
+    cursor: pointer;
+    background-color: #f5f2f2ba;
+    border-radius:10px ;
+}

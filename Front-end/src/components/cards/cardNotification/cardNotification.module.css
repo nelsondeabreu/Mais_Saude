@@ -1,0 +1,86 @@
+.notificationItem {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  transition: 0.3s;
+  gap: 2rem;
+}
+.notificationItem:hover {
+  cursor: pointer;
+}
+.notificationItem .backIcon{
+  border-radius: 100%;
+  width: 85px;
+  height: 60px;
+  background-color: #147EAB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notificationItem .LockIcon{
+  border-radius: 100%;
+  width: 35%;
+  height: 60px;
+  background-color: #147EAB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notificationItem .doorIcon{
+  border-radius: 100%;
+  width: 35%;
+  height: 60px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notificationItem svg{
+  font-size: 2rem;
+  color: #fff;
+}
+.notificationItem img{
+  width: 35%;
+  height: 60px;
+  border-radius: 100%;
+}
+.notificationItem h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.notificationItem p {
+  font-size: 13px;
+  margin-bottom: 3px;
+  color: #919191;
+}
+.notificationItem:hover {
+  background-color: #f6f9ff;
+}
+
+.notificationItem .content{
+  width: 20rem;
+}
+
+.notificationItem .divButtons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notificationItem .divButtons .btnConfirm{
+  border: none;
+  background-color: var(--first-color);
+  color: #Fff;
+  width: 50%;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.notificationItem .divButtons .btnRejet{
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  width: 45%;
+
+}

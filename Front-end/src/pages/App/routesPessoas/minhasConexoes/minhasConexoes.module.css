@@ -1,0 +1,6 @@
+.titulo{
+  font-size: var(--h1-font-size);
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--first-color);
+}

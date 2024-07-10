@@ -1,0 +1,351 @@
+.container{
+    box-shadow: 0px 0px 20px rgba(1, 57, 155, 0.1);
+    border-radius: 10px;
+    background: #fff;
+    margin-bottom:3%;
+    position: relative;
+}
+
+.container .headerPost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem;
+}
+
+.container .headerPost .userInfo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.container .headerPost svg{
+    font-size: var(--h2-font-size);
+    padding: -10px;
+}
+
+.container .headerPost .userInfo .imageUser{
+    width: 50px;
+    height: 50px;
+    border-radius:100%;
+}
+
+
+.container .headerPost .userInfo .infoLetters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15rem;
+}
+
+.container .headerPost .userInfo .infoLetters small{
+color:#65676B ;
+}
+
+.container .imagePost{
+    width:100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.container .legendReactions p{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+
+
+.container .dropDown{
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow:var(--box-shadow);
+    border: 1px solid #f1e9e9;
+    z-index: 1000;
+
+}
+
+.ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.ul li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .1rem;
+    padding: 7px;
+    border-bottom: 1px solid #f9f5f5;
+}
+.ul li:hover{
+    background-color: #e5e2e2;
+}
+
+.container .dropDown .btnEdit svg{
+    color: green;
+}
+
+.container .dropDown .btnDelete svg{
+    color: red;
+}
+
+.btnEdit{
+    padding: 0;
+}
+
+.divActions{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    border-top: 1px solid #a9aaac91;
+    border-bottom: 1px solid #a9aaac91;
+    padding: .5rem;
+
+}
+
+.reactions{
+    display: flex;
+    gap: .3rem;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 7px;
+    border-radius: 60px;
+    position: absolute;
+    bottom: 1.8rem;
+}
+
+.reactions img{
+    width: 40px;
+    
+}
+
+.like{
+    width: 20px;
+    height: 20px;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 13rem;
+    padding: .2rem;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.liked{
+    width: 11rem;
+
+}
+.icons:hover{
+    background-color: #e2e3e5;
+}
+
+.divContent{
+    width: 360px;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    border: 1px solid #b0b0b382;
+    border-radius: 8px;
+}
+
+.divContent2{
+    width: 40rem;
+    position: fixed;
+    top: 5%;
+    z-index: 1005;
+    left: 32rem;
+    border-radius: 10px;
+
+}
+
+.scrollPost{
+    z-index: 100;
+    height: 40rem;
+    overflow-y: scroll;
+}
+
+.scrollPost::-webkit-scrollbar{
+    width: 10px;
+}
+
+.scrollPost::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.scrollPost .header div{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.scrollPost .header div .btnClose{
+    background-color: #E4E6EB;
+    border-radius: 100%;
+    width: 2.1rem;
+    display: flex;
+    align-items: center;
+    color: #65676B;
+}
+
+.scrollPost .header{
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    border-bottom:1px solid #adaeae;
+    padding: 10px;
+}
+
+.divContent .divImageText{
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.divContent .divImageText .avatar {
+    height: 100%;
+
+}
+.divContent .divImageText .avatar img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.divContent .divImageText .divText{
+    width: 100%;
+}
+
+.divContent .divText textarea{
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+.btnComment{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.btnComment button{
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: var(--first-color);
+}
+
+.comments{
+    padding-left: 1rem;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    color: #65676B;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+}
+
+.editContainer{
+    background-color: #fff;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    width: 30rem;
+    z-index: 1005;
+    border-radius: 10px;
+}
+
+.shareContainer{
+    background-color: #fff;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    width: 35rem;
+    z-index: 1005;
+    border-radius: 10px;
+}
+
+.editContainer .header, .shareContainer .header{
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    border-bottom:1px solid #65676B;
+    padding: 10px;
+}
+
+.editContainer .header div .btnClose, .shareContainer .header div .btnClose{
+    background-color: #E4E6EB;
+    border-radius: 100%;
+    width: 2.1rem;
+    display: flex;
+    align-items: center;
+    color: #65676B;
+}
+
+.editContainer .header div, .shareContainer .header div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.editContainer .body, .shareContainer .body{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
+}
+
+.editContainer .body .imgName,.shareContainer .body .imgName{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.editContainer .body .imgName img, .shareContainer .body .imgName img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.editContainer .body form, .shareContainer .body form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.editContainer .body form textarea, .shareContainer .body form textarea{
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.editContainer .body form button, .shareContainer .body form button{
+    display: block;
+    background-color: var(--first-color);
+    color: #Fff;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.videoPost{
+    width: 100%;
+}
+.share{
+    padding: 1rem;
+}
+
+.trigga{
+    padding: 0;
+}

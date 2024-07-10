@@ -1,0 +1,30 @@
+.pageTitle h1{
+  font-size: var(--h1-font-size);
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--first-color);
+}
+
+.breadcrumb {
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+    color: #899bbd;
+    font-weight: 600;
+    display: flex;
+}
+.breadcrumb a {
+    color: #a9abaf;
+    transition: 0.3s;
+}
+.breadcrumb a:hover {
+    color: #51678f;
+}
+.breadcrumb .breadcrumb-item::before {
+    color: #899bbd;
+}
+.breadcrumb .active {
+    color: #51678f;
+    font-weight: 600;
+}
+
+  

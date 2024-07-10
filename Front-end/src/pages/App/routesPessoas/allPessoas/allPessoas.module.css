@@ -1,0 +1,59 @@
+.mainPacientes h1{
+  font-size: var(--h1-font-size);
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--first-color);
+}
+
+h1{
+  font-size: var(--h1-font-size);
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--first-color);
+}
+button{
+  background-color: transparent;
+  border: none;
+}
+
+.divBtn button{
+  justify-content: end;
+  border: none;
+  padding: 8px;
+  font-weight: 500;
+  background: #f0f0f0;
+  color: #000000bf;
+  border-radius: 5px;
+}
+
+.divBtn{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.dialogContent{
+    overflow-y: scroll;
+    position: fixed;
+    top: 2%;
+    left: 53%;
+    translate: -50%;
+    background: #fff;
+    width: 55rem;
+    height: 40rem;
+    z-index: 1003;
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.dialogContent .divHeader{
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #acacac;
+}
+
+.dialogContent .body{
+  padding: 1rem;
+  }

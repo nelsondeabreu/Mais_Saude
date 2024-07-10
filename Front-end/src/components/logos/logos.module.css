@@ -1,0 +1,80 @@
+.LogoHeader {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    transition: .2s;
+}
+.LogoHeader span,
+.LogoHeader svg {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    color: #fff;
+    margin: 0;
+    background-color: transparent;
+    transition: .2s;
+}
+.LogoHeaderIcon {
+    border: 2px solid var(--first-color);
+    padding: .1rem;
+    border-radius: .5rem;
+    transform: rotate(16deg);
+}
+.LogoHeader:hover .LogoHeaderIcon {
+    transform: rotate(-16deg) scale(1.1);
+}
+
+/*LogoFooter*/
+
+.LogoFooter {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    transition: .2s;
+}
+.LogoFooter span,
+.LogoFooter svg {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    color: var(--first-color);
+    margin: 0;
+    background-color: transparent;
+    transition: .2s;
+}
+.LogoFooterIcon {
+    border: 2px solid var(--first-color);
+    padding: .1rem;
+    border-radius: .5rem;
+    transform: rotate(16deg);
+    color: var(--text-color) !important;
+}
+.LogoFooter:hover .LogoFooterIcon {
+    transform: rotate(-16deg) scale(1.1);
+}
+
+/*LogoLogin*/
+
+.LogoLogin {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    transition: .2s;
+}
+.LogoLogin span,
+.LogoLogin svg {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+    margin: 0;
+    background-color: transparent;
+    transition: .2s;
+}
+.LogoLoginIcon {
+    border: 2px solid var(--first-color);
+    padding: .1rem;
+    border-radius: .5rem;
+    transform: rotate(16deg);
+    color: var(--text-color) !important;
+}
+.LogoLogin:hover .LogoLoginIcon {
+    transform: rotate(-16deg) scale(1.1);
+}

@@ -1,0 +1,10 @@
+.title{
+    color: var(--text-color);
+    font-size: var(--h1-font-size);
+    font-family: var(--font-logo);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}

@@ -1,0 +1,142 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output = "./generated/client1"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+//DataBase +MaisSaude
+
+// --Edntidades do Sistema
+model EntidadesSistema{
+  id String @id @default(uuid())
+  name String
+  cnpj String @unique
+  tipo_entidade String
+  email String @unique
+  endereco String
+  contactos ContactoEntidade[]
+  especialista Especialistas[]
+}
+
+model ContactoEntidade{
+  id String @id @default(uuid())
+  contacto Int 
+  entidade EntidadesSistema  @relation(fields: [entidadeID] , references: [id])
+  entidadeID String
+}
+
+enum Sexo{
+  Masculino
+  Feminino
+}
+
+model Especialistas{
+  id String @id @default(uuid())
+  name String
+  especialidade String
+  crm Int
+  entidade EntidadesSistema @relation(fields: [entidadeID] , references: [id])
+  entidadeID String
+  sexo Sexo
+}
+// -------------------------End Entidades----------------------------------
+
+//Users
+model Usuarios{
+  id String @id @default(uuid())
+  name  String
+  email String @unique
+  senha String
+  sexo Sexo
+  foto  String ?
+  crm   Int ? @unique
+  cnpj   Int ? @unique
+  nascimento DateTime
+  userPub            Publicacoes[] 
+  usuarioNotificacao Notificacoes[]
+  usuarioSMSrecebida MensagemRecebida[]
+  usuarioSMSenviada  MensagemEnviada[]
+  usuarioMensagens   Mensagens[]
+  usuarioContacto ContactoUsuario[]
+  userLogged UserLogged[]
+}
+
+model ContactoUsuario{
+  id String @id @default(uuid())
+  contacto Int @unique
+  usuarioContacto Usuarios @relation(fields: [usuarioID] , references: [id])
+  usuarioID String
+}
+
+model Publicacoes{
+  id String @id @default(uuid())
+  conteudo String
+  foto     String?
+  video    String?
+  data     DateTime @default(now())
+  usuarioPub Usuarios @relation(fields: [usuarioID] , references: [id])
+  usuarioID String
+}
+
+model Notificacoes{
+  id String @id @default(uuid())
+  data DateTime @default(now())
+  conteudo String
+  usuarioNotificacao Usuarios @relation(fields: [usuarioID] , references: [id])
+  usuarioID String
+}
+
+model Mensagens{
+  id String @id @default(uuid())
+  conteudo String
+  data DateTime @default(now())
+
+  mensagemRecebida MensagemRecebida[]
+  mensagemEnviada  MensagemEnviada[]
+  usuarioMensagens Usuarios @relation(fields: [usuarioID] , references: [id])
+  usuarioID String
+}
+
+// Defina o modelo para recibos de mensagens
+
+model MensagemRecebida {
+  id String @id @default(uuid())
+  leitura    Boolean  @default(false)
+  data       DateTime @default(now())
+
+  mensagemId String
+  mensagemRecebida    Mensagens  @relation(fields: [mensagemId], references: [id])
+  usuarioID  String
+  usuarioSMSrecebida      Usuarios     @relation(fields: [usuarioID], references: [id])
+}
+
+// Defina o modelo para mensagens enviadas
+
+model MensagemEnviada {
+  id String @id @default(uuid())
+  mensagemId  String
+  mensagemEnviada  Mensagens  @relation(fields: [mensagemId], references: [id])
+  usuarioID  String
+  usuarioSMSenviada Usuarios     @relation(fields: [usuarioID], references: [id])
+}
+
+model Tokens {
+  id String @id @default(uuid())
+  token String @unique
+}
+
+model UserLogged {
+  id String @id @default(uuid()) 
+  UserID String
+  user Usuarios @relation(fields: [UserID], references: [id])
+
+}

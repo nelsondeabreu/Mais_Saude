@@ -1,0 +1,30 @@
+/*About section */
+.SectionAbout .content h3 {
+    font-weight: var(--font-bold);
+    font-size: var(--biggest-font-size);
+    font-family: var(--body-font);
+    color: var(--text-color);
+  }
+  
+  .SectionAbout .content p {
+    margin: 30px 0;
+    color: var(--text-color);
+  }
+ 
+  .SectionAbout .content ul li {
+    padding: 0 0 15px 26px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semibold);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 7px;
+  }
+  
+  .SectionAbout .content ul svg{
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+  }
+    .SectionAbout .content ul .titleLink{
+      color: var(--first-color);
+    }

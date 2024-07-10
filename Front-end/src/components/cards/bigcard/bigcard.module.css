@@ -1,0 +1,47 @@
+.cardContainer{
+    padding: 15px;
+}
+
+.cardContainer .all{
+    text-align: center;
+    margin-top: 8px;
+}
+
+
+.cards{
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    gap: .5rem;
+}
+
+/* Adicione estas classes CSS ao seu arquivo de estilo */
+
+/* Estilo para o container pai dos cards */
+.hospitalMain{
+    padding: 15px;
+
+}
+.hospitalContainer {
+    overflow-x: auto; /* Adicione scroll horizontal */
+    white-space: nowrap; /* Impede que os cards quebrem linha */
+}
+
+
+/* Estilo para a barra de rolagem */
+.hospitalContainer::-webkit-scrollbar {
+    display: none;
+    height: 8px; /* Altura da barra de rolagem */
+}
+
+.viewAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.viewAll a{
+    margin-top: .8rem;
+    color: #65676b;
+}
